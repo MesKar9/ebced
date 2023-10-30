@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonuçlar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/charts/chart.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="chart-heading">Kişinin Element Grafiği</h2>
+        <div class="elements-stats">
+            <div class="chart-container">
+                <canvas class="self-chart"></canvas>
+            </div>
+            <% if (locals.personLetters) { %>
+            <div class="details person">
+                <ul class="self-ul">
+                    <li>Hava: <span class="percentage self-air"><%= personLetters[3] %></span></li>
+                    <li>Su: <span class="percentage self-water"><%= personLetters[2] %></span></li>
+                    <li>Toprak: <span class="percentage self-earth"><%= personLetters[1] %></span></li>
+                    <li>Ateş: <span class="percentage self-fire"><%= personLetters[0] %></span></li>
+                    <li>Ebced: <span class="percentage self-ebced"><%= personLetters[4] %></span></li>
+
+                </ul>
+            </div>
+            <% } %>
+        </div>
+
+        <h2 class="chart-heading">Annenin Element Grafiği</h2>
+        <div class="elements-stats">
+            <div class="chart-container">
+                <canvas class="mother-chart"></canvas>
+            </div>
+            <% if (locals.motherLetters) { %>
+            <div class="details person">
+                <ul class="mother-ul">
+                    <li>Hava: <span class="percentage mother-air"><%= motherLetters[3] %></span></li>
+                    <li>Su: <span class="percentage mother-water"><%= motherLetters[2] %></span></li>
+                    <li>Toprak: <span class="percentage mother-earth"><%= motherLetters[1] %></span></li>
+                    <li>Ateş: <span class="percentage mother-fire"><%= motherLetters[0] %></span></li>
+                    <li>Ebced: <span class="percentage mother-ebced"><%= motherLetters[4] %></span></li>
+                </ul>
+            </div>
+            <% } %>
+        </div>
+
+        <h2 class="chart-heading">Babanın Element Grafiği</h2>
+        <div class="elements-stats">
+            <div class="chart-container">
+                <canvas class="father-chart"></canvas>
+            </div>
+            <% if (locals.fatherLetters) { %>
+            <div class="details person">
+                <ul class="father-ul">
+                    <li>Hava: <span class="percentage father-air"><%= fatherLetters[3] %></span></li>
+                    <li>Su: <span class="percentage father-water"><%= fatherLetters[2] %></span></li>
+                    <li>Toprak: <span class="percentage father-earth"><%= fatherLetters[1] %></span></li>
+                    <li>Ateş: <span class="percentage father-fire"><%= fatherLetters[0] %></span></li>
+                    <li>Ebced: <span class="percentage father-ebced"><%= fatherLetters[4] %></span></li>
+                </ul>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/charts/chart.js" charset="UTF-8"></script>
+</body>
+</html>
