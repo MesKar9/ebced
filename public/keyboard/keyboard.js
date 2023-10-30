@@ -23,7 +23,21 @@ nameInputs.forEach(textInput => {
 
 buttons.forEach(btn => {
     btn.addEventListener('click', (event) =>{
-        inputRegion.value += btn.innerText;
-        chars.push(btn.innerText)
+        if(btn.classList[0] === 'material-icons' ){
+            console.log('bu backspace');
+            chars.pop();
+            console.log(chars);
+            inputRegion.value = chars.join('');
+        } else {
+            inputRegion.value += btn.innerText;
+            chars.push(btn.innerText)
+        } 
     });
 });
+
+function backspace(btn) {
+    if(btn.classList[0] === 'material-icons' ){
+        console.log('bu backspace');
+        return true;
+    } return false;
+}
