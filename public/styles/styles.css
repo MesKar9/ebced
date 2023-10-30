@@ -73,6 +73,7 @@
     border: none;
     outline: none;
     font-size: 42px;
+    vertical-align: top;
 }
 
 .key-btn:hover {
